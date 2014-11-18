@@ -1,0 +1,41 @@
+html {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+td {
+  padding: 4px;
+}
+td:first-child {
+  padding-left: 0;
+}
+button {
+  padding: 4px;
+}
+label {
+  font-weight: bold;
+}
+input {
+  height: 14px;
+  padding: 4px;
+}
+.center {
+  text-align: center;
+}
+.error {
+  color: #f00;
+}
+#stripe_key {
+  width: 388px;
+}
+#s2id_stripe_card_number {
+  width: 400px;
+}
+#stripe_cvc {
+  width: 24px;
+}
+#stripe_exp_month {
+  width: 24px;
+}
+#stripe_exp_year {
+  width: 32px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>stripe-mktoken</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css" rel="stylesheet"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"/>
+    <link href="app.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>stripe-mktoken</h1>
+
+<p>Enter your <a href="https://dashboard.stripe.com/account/apikeys" target="_blank"><b>Test Publishable Key</b></a>
+   before using the form. Your key will be persisted between sessions using HTML5 localStorage.</p>
+
+<form id="stripe_form" role="form">
+    <table>
+        <tr class="form-group">
+            <td><label for="stripe_key">Publishable Key</label></td>
+            <td><input type="text" class="form-control" id="stripe_key" placeholder="pk_test_xR17872ltgx6q0qZ48zAKtGJ"/></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="stripe_card_number">Card Number</label></td>
+            <td><input type="text" class="form-control" id="stripe_card_number" placeholder="Card Number" data-stripe="number"/></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="stripe_cvc">CVC</label></td>
+            <td><input type="text" class="form-control center" id="stripe_cvc" maxlength="3" data-stripe="cvc"/></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="stripe_exp_month">Expiration</label></td>
+            <td><input type="text" class="form-control center" id="stripe_exp_month" placeholder="MM" maxlength="2" data-stripe="exp-month"/> / <input type="text" class="form-control center" id="stripe_exp_year" placeholder="YYYY" maxlength="4" data-stripe="exp-year"/></td>
+        </tr>
+        <tr class="form-group">
+            <td colspan="2"><button id="stripe_submit" type="submit">Add Card</button></td>
+        </tr>
+    </table>
+</form>
+
+<p id="result"></p>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
